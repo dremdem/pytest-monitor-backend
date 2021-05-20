@@ -1,0 +1,6 @@
+pytest-monitor==1.6.0
+flask==1.1.2
+flask-restful==0.3.8
+pymongo==3.11.4
+gunicorn[gevent]
+mongomock==3.22.1

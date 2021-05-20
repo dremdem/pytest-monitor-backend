@@ -1,0 +1,29 @@
+version: '3.2'
+
+services:
+  pymon_mongo_local:
+    image: mongo:4.2.3
+    restart: "no"
+    env_file:
+      - .env/mongo.env
+    ports:
+      - 27017:27017
+    volumes:
+      - pymon_mongo_data_local:/data/db
+      
+  pymon_backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env/mongo.env
+    image: pymon_backend
+    volumes:
+    - .:/app
+    depends_on:
+      - pymon_mongo_local
+    ports:
+      - 5000:5000
+
+volumes:
+  pymon_mongo_data_local: {}
