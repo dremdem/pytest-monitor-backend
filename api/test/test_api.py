@@ -32,7 +32,7 @@ class ApiTest(unittest.TestCase):
             "session_h": "c2c5b0d5d3c799ce9fc174451609f47f",
             "run_date": "2021-05-07T01:16:59.032413",
             "scm_ref": "2cc4cdda54450ca99a340c2c309f1fc19579d78b",
-            "descriptio": None}
+            "description": None}
 
         self.metric_post = {
             "session_h": "c2c5b0d5d3c799ce9fc174451609f47f",

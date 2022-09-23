@@ -24,7 +24,7 @@ sessions_parser = reqparse.RequestParser()
 sessions_parser.add_argument("session_h", type=str)
 sessions_parser.add_argument("run_date", type=str)
 sessions_parser.add_argument("scm_ref", type=str)
-sessions_parser.add_argument("descriptio", type=str)
+sessions_parser.add_argument("description", type=str)
 
 metrics_parser = reqparse.RequestParser()
 metrics_parser.add_argument("session_h", type=str)
